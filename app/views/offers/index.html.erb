@@ -19,7 +19,7 @@
         <td><%= offer.title %></td>
         <td><%= offer.description %></td>
         <td><%= offer.retailer %></td>
-        <td><%= offer.location %></td>
+        <td><%= offer.location %> <%= image_tag(offer.cover_image_url) if offer.cover_image? %></td>
         <td><%= link_to 'Show', offer %></td>
         <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
         <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

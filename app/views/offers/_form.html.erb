@@ -27,6 +27,12 @@
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+
+
+    <%= image_tag(@offer.cover_image_url) if @offer.cover_image? %>
+    <%= f.file_field :cover_image %>
+    <%= f.hidden_field :cover_image_cache %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
