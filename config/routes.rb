@@ -1,4 +1,6 @@
 WasteNot::Application.routes.draw do
+  resources :retailers
+
   resources :offers
 
   # The priority is based upon order of creation: first created -> highest priority.

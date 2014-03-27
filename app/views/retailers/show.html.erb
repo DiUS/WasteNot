@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @retailer.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @retailer.bio %>
+</p>
+
+<p>
+  <strong>Web page:</strong>
+  <%= @retailer.web_page %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @retailer.contact_name %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @retailer.contact_phone %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @retailer.contact_email %>
+</p>
+
+<%= link_to 'Edit', edit_retailer_path(@retailer) %> |
+<%= link_to 'Back', retailers_path %>
