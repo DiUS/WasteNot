@@ -10,6 +10,7 @@ WasteNot::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'offers#index'
+  get 'about' => 'pages#about', as: :pages_about
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
