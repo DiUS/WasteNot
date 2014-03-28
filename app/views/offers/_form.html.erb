@@ -1,6 +1,6 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    $('[data-behaviour~=datepicker]').datepicker();
+    $('[data-behaviour~=datepicker]').datepicker({ language: "en-AU" });
   })
 </script>
 <%= form_for(@offer) do |f| %>
@@ -35,7 +35,7 @@
 
   <div class="field">
     <%= f.label :offer_ends %><br>
-    <%= f.text_field :offer_ends, "data-behaviour" => 'datepicker' %>
+    <%= f.text_field :offer_ends, "data-behaviour" => 'datepicker', "data-date-format" => "dd-mm-yyyy"%>
   </div>
 
   <div class="field">
