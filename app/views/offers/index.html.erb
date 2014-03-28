@@ -8,11 +8,13 @@
     </div>
   </div>
   <div class="col-md-9">
+    <% if @active_category_name == "All" %>
     <div class="jumbotron">
       <h1>Help, Recycle, Reuse, Give</h1>
       <p>Reduce waste, help others. Donate excess stock</p>
       <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
     </div>
+    <% end %>
     <%= render 'offers/offer_cards', offers: @offers %>
   </div>
 </div>
