@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require imagesloaded.pkgd
+//= require jquery.masonry
+//= require responsive-tables
+//= require modernizr.custom
+//= require AnimOnScroll
 //= require_tree .

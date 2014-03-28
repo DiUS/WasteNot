@@ -1,33 +1,22 @@
-<h1>Listing offers</h1>
+<h1>Offers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Retailer</th>
-      <th>Location</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+
+<%= link_to 'New Offer', new_offer_path, class: 'btn btn-primary' %>
+
+
+<div class="bricks effect-4" data-bricks="true" id="offer-bricks">
     <% @offers.each do |offer| %>
-      <tr>
-        <td><%= offer.title %></td>
-        <td><%= offer.description %></td>
-        <td><%= offer.retailer %></td>
-        <td><%= offer.location %> <%= image_tag(offer.cover_image_url) if offer.cover_image? %></td>
-        <td><%= link_to 'Show', offer %></td>
-        <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-        <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <a href="" class="brick__item offer-card">
+        <%= image_tag(offer.cover_image_url, class: 'offer-card__image') if offer.cover_image? %>
+        <div class="offer-card__content">
+           <h4 class="offer-card__title"><%= offer.title %></h4>
+           <div><%= offer.description %></div>
+           <div class=""><%= offer.retailer %></div>
+        </div>
+      </a>
     <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Offer', new_offer_path %>
+</div>

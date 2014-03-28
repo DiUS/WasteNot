@@ -1,0 +1,27 @@
+.offer-card {
+  color: $text-color;
+  background-color: $gray-lighter;
+  &:hover {
+    background-color: #FFFF9B;
+  }
+}
+
+.offer-card:hover {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.offer-card__title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.offer-card__content {
+  padding: 20px;
+  font-size: 13px;
+}
+
+.offer-card__image {
+  width: 100%;
+}
