@@ -10,4 +10,10 @@ class SessionsController < ApplicationController
     session[:c_org] = nil
     redirect_to :back
   end
+
+  def unset_org
+    session[:r_org] = nil
+    session[:c_org] = nil
+    redirect_to root_path
+  end
 end

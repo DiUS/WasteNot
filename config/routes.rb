@@ -16,6 +16,7 @@ WasteNot::Application.routes.draw do
 
   get 'set_charity/:id' => 'sessions#set_charity'
   get 'set_retailer/:id' => 'sessions#set_retailer'
+  get 'unset_org' => 'sessions#unset_org'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
