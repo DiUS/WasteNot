@@ -36,6 +36,18 @@
 <h2>Endorsements</h2>
 <% @charity.endorsements.each do |endorsement| %>
   <p>Stars: <%= endorsement.stars %></p>
+
+<%= form_for [ endorsement], url: '#' do |f| %>
+
+  <span class="review__rating star-rating--read-only">
+    <%= f.radio_button :stars, '1', disabled: true %><i></i>
+    <%= f.radio_button :stars, '2', disabled: true %><i></i>
+    <%= f.radio_button :stars, '3', disabled: true %><i></i>
+    <%= f.radio_button :stars, '4', disabled: true %><i></i>
+    <%= f.radio_button :stars, '5', disabled: true %><i></i>
+  </span>
+<% end %>
+
   <p>Comment: <%= endorsement.comment %></p>
   <p>Retailer: <%= endorsement.retailer.name %></p>
   <hr>
