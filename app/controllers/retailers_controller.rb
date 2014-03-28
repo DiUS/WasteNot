@@ -11,7 +11,7 @@ class RetailersController < ApplicationController
   # GET /retailers/1.json
   def show
     @on_offer = Offer.all(:conditions => {:retailer_id => params[:id], :charity_id => nil})
-    @offer_taken = Offer.all(:conditions => {:retailer_id => params[:id], :charity_id => !nil})
+    @offer_taken = Offer.where("id = ? and charity_id is not NULL", params[:id])
   end
 
   # GET /retailers/new
