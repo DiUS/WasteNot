@@ -10,6 +10,7 @@ class CharitiesController < ApplicationController
   # GET /charities/1
   # GET /charities/1.json
   def show
+    @offers = Offer.find_all_by_charity_id params[:id]
   end
 
   # GET /charities/new

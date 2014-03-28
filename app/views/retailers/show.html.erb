@@ -30,5 +30,8 @@
   <%= @retailer.contact_email %>
 </p>
 
-<%= link_to 'Edit', edit_retailer_path(@retailer) %> |
-<%= link_to 'Back', retailers_path %>
+<h2>On Offer</h2>
+<%= render 'offers/offer_cards', offers: @on_offer %>
+
+<h2>Offers Accepted</h2>
+<%= render 'offers/offer_cards', offers: @offer_taken %>

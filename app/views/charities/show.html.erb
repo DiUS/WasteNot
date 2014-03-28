@@ -25,5 +25,5 @@
   <%= @charity.contact_phone %>
 </p>
 
-<%= link_to 'Edit', edit_charity_path(@charity) %> |
-<%= link_to 'Back', charities_path %>
+<h2>Offers Accepted</h2>
+<%= render 'offers/offer_cards', offers: @offers %>
