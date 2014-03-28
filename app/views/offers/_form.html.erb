@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-behaviour~=datepicker]').datepicker();
+  })
+</script>
 <%= form_for(@offer) do |f| %>
   <% if @offer.errors.any? %>
     <div id="error_explanation">
@@ -23,11 +28,20 @@
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :category_id %><br>
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
 
+  <div class="field">
+    <%= f.label :offer_ends %><br>
+    <%= f.text_field :offer_ends, "data-behaviour" => 'datepicker' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delivery_options %><br>
+    <%= f.select :delivery_options, options_for_select([["Pickup", "Pickup"], ["Drop off", "Drop off"]]) %>
+  </div>
 
     <%= image_tag(@offer.cover_image_url) if @offer.cover_image? %>
     <%= f.file_field :cover_image %>

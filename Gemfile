@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'mini_magick'
 
-
+gem 'bootstrap-datepicker-rails'
 
 
 group :doc do

@@ -19,3 +19,4 @@
 //= require modernizr.custom
 //= require AnimOnScroll
 //= require_tree .
+//= require bootstrap-datepicker

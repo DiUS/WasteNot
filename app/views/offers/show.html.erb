@@ -10,6 +10,16 @@
       <strong>Location:</strong>
       <%= @offer.location %>
     </p>
+      
+      <p>
+        <strong>Offer ends:</strong>
+        <%= @offer.offer_ends %>
+      </p>
+      
+      <p>
+        <strong>Delivery options:</strong>
+        <%= @offer.delivery_options %>
+      </p>  
 
     <% unless @offer.category.nil? %>
       <p class="offer__category">

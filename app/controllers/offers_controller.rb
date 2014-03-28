@@ -45,6 +45,8 @@ class OffersController < ApplicationController
     @offer.location = offer_params[:location]
     @offer.cover_image = offer_params[:cover_image]
     @offer.category = Category.find_by_id(offer_params[:category_id])
+    @offer.offer_ends = DateTime.parse(offer_params[:offer_ends], "dd/mm/YYYY") if offer_params[:offer_ends]
+    @offer.delivery_options = offer_params[:delivery_options]
 
     respond_to do |format|
       if @offer.save
@@ -95,7 +97,9 @@ class OffersController < ApplicationController
         :location,
         :cover_image,
         :retailer,
-        :category
+        :category,
+        :offer_ends,
+        :delivery_options
         )
     end
 end
