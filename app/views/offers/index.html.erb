@@ -13,7 +13,7 @@
         <div class="offer-card__content">
            <h4 class="offer-card__title"><%= offer.title %></h4>
            <div><%= offer.description %></div>
-           <div class=""><%= offer.retailer %></div>
+           <div class=""><%= offer.retailer.name if offer.retailer %></div>
         </div>
       </a>
     <% end %>

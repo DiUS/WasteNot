@@ -20,8 +20,8 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :retailer %><br>
-    <%= f.text_field :retailer %>
+    <%= f.label :retailer_id %><br>
+    <%= f.collection_select :retailer, @retailers, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :location %><br>

@@ -16,10 +16,12 @@ class OffersController < ApplicationController
   # GET /offers/new
   def new
     @offer = Offer.new
+    @retailers = Retailer.all
   end
 
   # GET /offers/1/edit
   def edit
+    @retailers = Retailer.all
   end
 
   def accept
@@ -32,7 +34,14 @@ class OffersController < ApplicationController
   # POST /offers
   # POST /offers.json
   def create
-    @offer = Offer.new(offer_params)
+    retailer = Retailer.find(offer_params[:retailer])
+    @offer = Offer.new
+
+    @offer.retailer = retailer
+    @offer.title = offer_params[:title]
+    @offer.description = offer_params[:description]
+    @offer.location = offer_params[:location]
+    @offer.cover_image = offer_params[:cover_image]
 
     respond_to do |format|
       if @offer.save
@@ -80,9 +89,9 @@ class OffersController < ApplicationController
       params.require(:offer).permit(
         :title,
         :description,
-        :retailer,
         :location,
-        :cover_image
+        :cover_image,
+        :retailer
         )
     end
 end
