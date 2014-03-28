@@ -14,8 +14,8 @@ jQuery ->
         $(".brick__item").width box_width
         box_width
 
-  if $('#offer-bricks').length > 0
-    new AnimOnScroll document.getElementById( 'offer-bricks' ),
-      minDuration : 0.4
-      maxDuration : 0.7
-      viewportFactor : 0.2
+  # if $('#offer-bricks').length > 0
+  #   new AnimOnScroll document.getElementById( 'offer-bricks' ),
+  #     minDuration : 0.4
+  #     maxDuration : 0.7
+  #     viewportFactor : 0.2

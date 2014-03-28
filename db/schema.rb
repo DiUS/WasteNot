@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20140328012914) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "charity_id"
     t.string   "cover_image"
+    t.integer  "charity_id"
     t.integer  "retailer_id"
     t.integer  "category_id"
   end
