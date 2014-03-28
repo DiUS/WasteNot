@@ -8,7 +8,7 @@
 categories = [
   ["Books", "Book description"],
   ["Clothes", "Clothes description"],
-  ["Face, Hair Body and Teeth", "Toileteries"],
+  ["Face, Hair, Body", "Description of item"],
   ["Food & Beverage", "foodies"],
   ["Gifts", "Description of gift"],
   ["Household", "Description of item"],
@@ -24,12 +24,18 @@ retailers = [
   ["Bakers Delight", "Bread maker", "www.bakersdelight.com.au", "Fred the Baker", "0412876345", "fred@bakers.com.au"],	
   ["Myer", "Myer is a big retailer with a long bio", "www.myer.com.au", "Bernie Brookes", "0412345678", "contact@myer.com.au"],
   ["Artarmon Fruit Shop", "Best fruit and veg in Artarmon", " ", "William Smith", "98678576", " "],
-  ["Joans Clothing", "Womens clothing in Penrith", "www.joansclothing.com.au", "Joan Jett", "0412345678", "joan@joansclothing.com.au"]
+  ["Joans Clothing", "Womens clothing in Penrith", "www.joansclothing.com.au", "Joan Jett", "0412345678", "joan@joansclothing.com.au"],
+  ["Strathfield Pharmacy", "Complete pharmacy", "www.strathfieldpharm.com.au", "Bill Brooks", "0408576432", "manager@strathfieldpharm.com.au"],
+  ["Funland Toys", "Toys for young and old", "www.funland.com.au", "Mary Wright", "0413859432", "mwright@funland.com.au"]
 ]
 offers = [
-  ["Bread", "Fresh bread which we dont need", "Artarmon, Sydney", nil, 1, 4, Date.new(2014, 03, 25), "Pickup"],
-  ["Shoes", "Colourful footwear", "Glebe, Sydney", nil, 2, 2],
-  ["10 kg tomatoes", "Very ripe need to be used quickly", "Artarmon, Sydney", nil, 3, 4]  
+  ["Bread", "20 cape seed rolls", "Artarmon, Sydney", nil, 1, 4, Date.new(2014, 03, 25), "Pickup"],
+  ["Shoes", "Colourful footwear", "Glebe, Sydney", nil, 2, 2, Date.new(2014, 05, 05), "Drop off"],
+  ["10 kg tomatoes", "Very ripe need to be used quickly", "Artarmon, Sydney", nil, 3, 4, Date.new(2014, 04, 20), "Pickup"],
+  ["Kids shoes", "Suit 2 year old girl", "Artarmon, Sydney", nil, 4, 2, Date.new(2014, 04, 20), "Pickup"],
+  ["Baby products", "Assorted toiletries for babies", "Chatswood, Sydney", nil, 4, 3, Date.new(2014, 04, 29), "Drop off"],
+  ["Kids Toys", "Cute fluffy toys", "Cronulla, Sydney", nil, 6, 5, Date.new(2014, 04, 29), "Pickup"],
+  ["Cookware", "Good quality pots and pans", "Hornsby, Sydney", nil, 2, 6, Date.new(2014, 04, 30), "Pickup"]   
 ]
 
 categories.each do |name, description|
