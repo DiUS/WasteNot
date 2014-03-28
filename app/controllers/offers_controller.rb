@@ -4,7 +4,9 @@ class OffersController < ApplicationController
   # GET /offers
   # GET /offers.json
   def index
-    @offers = Offer.all(:conditions => {:charity_id => nil})
+    @offers = params[:category_id].nil? ? Offer.all(:conditions => {:charity_id => nil}) : Offer.all(:conditions => {:charity_id => nil, :category_id => params[:category_id]})
+    @categories = Category.all()
+    @active_category_name = params[:category_id].nil? ? "All" : Category.find(params[:category_id]).name
   end
 
   # GET /offers/1

@@ -1,2 +1,13 @@
-
-<%= render 'offers/offer_cards', offers: @offers %>
+<div class="row">
+  <div class="col-xs-3">
+    <div class="list-group">
+      <a class="list-group-item <%= "active" if @active_category_name == "All"%>" href="<%= offers_path %>">All</a>
+      <% @categories.each do |cat| %>
+        <a class="list-group-item <%= "active" if @active_category_name == cat.name %>" href="<%= offers_path %>?category_id=<%= cat.id %>"><%= cat.name %></a>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-xs-9">
+      <%= render 'offers/offer_cards', offers: @offers %>
+  </div>
+</div>
