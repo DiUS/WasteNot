@@ -5,8 +5,12 @@
       <div class="offer-card__content">
          <h4 class="offer-card__title"><%= offer.title %></h4>
          <div><%= offer.description %></div>
-         <div class=""><%= offer.retailer.name if offer.retailer %></div>
-          <div class=""><%= offer.category.name if offer.category %></div>
+         
+        <% if offer.category %>
+          <div class="offer-card__category"><%= offer.category.name %></div>
+        <% end %>
+
+        <div class="offer-card__retailer"><%= offer.retailer.name if offer.retailer %></div>
       </div>
     </a>
   <% end %>
