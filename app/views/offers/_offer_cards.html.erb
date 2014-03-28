@@ -6,6 +6,7 @@
          <h4 class="offer-card__title"><%= offer.title %></h4>
          <div><%= offer.description %></div>
          <div class=""><%= offer.retailer.name if offer.retailer %></div>
+          <div class=""><%= offer.category.name if offer.category %></div>
       </div>
     </a>
   <% end %>

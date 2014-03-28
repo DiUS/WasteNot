@@ -23,6 +23,10 @@
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </div>
+    <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category, @categories, :id, :name %>
+  </div>
 
 
     <%= image_tag(@offer.cover_image_url) if @offer.cover_image? %>

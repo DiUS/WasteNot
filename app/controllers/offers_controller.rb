@@ -17,11 +17,13 @@ class OffersController < ApplicationController
   def new
     @offer = Offer.new
     @retailers = Retailer.all
+    @categories = Category.all
   end
 
   # GET /offers/1/edit
   def edit
     @retailers = Retailer.all
+    @categories = Category.all
   end
 
   def accept
@@ -41,6 +43,7 @@ class OffersController < ApplicationController
     @offer.description = offer_params[:description]
     @offer.location = offer_params[:location]
     @offer.cover_image = offer_params[:cover_image]
+    @offer.category = Category.find(offer_params[:category])
 
     respond_to do |format|
       if @offer.save
@@ -90,7 +93,8 @@ class OffersController < ApplicationController
         :description,
         :location,
         :cover_image,
-        :retailer
+        :retailer,
+        :category
         )
     end
 end

@@ -20,4 +20,11 @@
   <%= @offer.location %>
 </p>
 
+<p>
+  <strong>Category:</strong>
+  <%= @offer.category.name %>
+</p>
+
+<%= image_tag(@offer.cover_image_url, class: 'offer-card__image') if @offer.cover_image? %>
+
 <%= link_to 'Accept Offer', offer_accept_path(@offer) if @can_accept%>
