@@ -36,5 +36,5 @@
 
 
 
-<%= link_to 'Accept Offer', offer_accept_path(@offer) if @can_accept%>
+<%= link_to 'Accept Offer', offer_accept_path(@offer), class: "btn btn-success" if @can_accept%>
 <%= link_to 'Edit Offer', edit_offer_path(@offer) if @can_edit%>
