@@ -1,4 +1,6 @@
 WasteNot::Application.routes.draw do
+  resources :categories
+
   resources :charities
 
   resources :retailers
