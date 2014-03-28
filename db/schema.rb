@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20140327233401) do
 
+  create_table "charities", force: true do |t|
+    t.string   "name"
+    t.string   "webpage"
+    t.string   "contact_name"
+    t.string   "contact_email"
+    t.string   "contact_phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "offers", force: true do |t|
     t.string   "title"
     t.string   "description"
@@ -24,17 +34,6 @@ ActiveRecord::Schema.define(version: 20140327233401) do
     t.string   "cover_image"
   end
 
-  create_table "charities", force: true do |t|
-    t.string   "name"
-    t.string   "webpage"
-    t.string   "contact_name"
-    t.string   "contact_email"
-    t.string   "contact_phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-
   create_table "retailers", force: true do |t|
     t.string   "name"
     t.string   "bio"
@@ -45,4 +44,5 @@ ActiveRecord::Schema.define(version: 20140327233401) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 end

@@ -12,6 +12,9 @@ WasteNot::Application.routes.draw do
   root 'offers#index'
   get 'about' => 'pages#about', as: :pages_about
 
+  get 'set_charity/:id' => 'sessions#set_charity'
+  get 'set_retailer/:id' => 'sessions#set_retailer'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
