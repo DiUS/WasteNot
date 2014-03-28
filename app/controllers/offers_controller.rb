@@ -33,7 +33,14 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @offer.charity_id = session[:c_org].id
     @offer.save
-    redirect_to offer_path @offer, notice: 'Offer was successfully accepted.'
+    redirect_to offer_path(@offer), notice: 'Offer was successfully accepted.'
+  end
+
+  def unaccept
+    @offer = Offer.find(params[:offer_id])
+    @offer.charity_id = nil
+    @offer.save
+    redirect_to offer_path(@offer), notice: 'Offer was successfully removed.'
   end
 
   # POST /offers

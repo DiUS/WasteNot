@@ -7,6 +7,7 @@ WasteNot::Application.routes.draw do
 
   resources :offers do
     get 'accept'
+    get 'unaccept'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
