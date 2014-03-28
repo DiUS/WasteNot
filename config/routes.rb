@@ -3,7 +3,9 @@ WasteNot::Application.routes.draw do
 
   resources :retailers
 
-  resources :offers
+  resources :offers do
+    get 'accept'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

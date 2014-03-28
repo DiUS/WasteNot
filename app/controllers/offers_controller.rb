@@ -10,6 +10,7 @@ class OffersController < ApplicationController
   # GET /offers/1
   # GET /offers/1.json
   def show
+    @can_accept = !session[:c_org].nil? && @offer.charity_id.nil?
   end
 
   # GET /offers/new
@@ -19,6 +20,13 @@ class OffersController < ApplicationController
 
   # GET /offers/1/edit
   def edit
+  end
+
+  def accept
+    @offer = Offer.find(params[:offer_id])
+    @offer.charity_id = session[:c_org].id
+    @offer.save
+    redirect_to offer_path @offer
   end
 
   # POST /offers

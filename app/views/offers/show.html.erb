@@ -20,5 +20,4 @@
   <%= @offer.location %>
 </p>
 
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+<%= link_to 'Accept Offer', offer_accept_path(@offer) if @can_accept%>
