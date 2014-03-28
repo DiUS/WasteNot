@@ -28,3 +28,4 @@
 <%= image_tag(@offer.cover_image_url, class: 'offer-card__image') if @offer.cover_image? %>
 
 <%= link_to 'Accept Offer', offer_accept_path(@offer) if @can_accept%>
+<%= link_to 'Edit Offer', edit_offer_path(@offer) if @can_edit%>

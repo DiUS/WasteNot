@@ -11,6 +11,7 @@ class OffersController < ApplicationController
   # GET /offers/1.json
   def show
     @can_accept = !session[:c_org].nil? && @offer.charity_id.nil?
+    @can_edit = !session[:r_org].nil? && @offer.retailer_id == session[:r_org].id
   end
 
   # GET /offers/new
@@ -43,7 +44,7 @@ class OffersController < ApplicationController
     @offer.description = offer_params[:description]
     @offer.location = offer_params[:location]
     @offer.cover_image = offer_params[:cover_image]
-    @offer.category = Category.find(offer_params[:category])
+    @offer.category = Category.find_by_id(offer_params[:category_id])
 
     respond_to do |format|
       if @offer.save
