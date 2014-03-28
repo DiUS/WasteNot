@@ -36,6 +36,12 @@
       </form>
       <% end %>
 
+      <% if can_accept_offers %>
+      <form class="navbar-form navbar-left" role="search">
+        <%= link_to 'View open offers', offers_path, class: 'btn btn-success' %>
+      </form>
+      <% end %>
+
       <ul class="nav navbar-nav">
         <li><%= link_to 'About', pages_about_path %></li>
       </ul>
