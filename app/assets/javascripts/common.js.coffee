@@ -19,3 +19,7 @@ jQuery ->
       minDuration : 0.4
       maxDuration : 0.7
       viewportFactor : 0.2
+
+  $('[data-date]').each ->
+    time = moment($(this).text()).format('MMMM Do YYYY');
+    $(this).text(time)

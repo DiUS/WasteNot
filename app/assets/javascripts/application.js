@@ -18,5 +18,6 @@
 //= require responsive-tables
 //= require modernizr.custom
 //= require AnimOnScroll
+//= require moment
 //= require_tree .
 //= require bootstrap-datepicker

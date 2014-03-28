@@ -1,7 +1,7 @@
-<h1><%= @offer.title %></h1>
-<p class="offer__retailer-name"><%= @offer.retailer.name %></p>
 <div class="row">
-  <div class="col-xs-7">
+  <div class="col-md-7">
+    <h1><%= @offer.title %></h1>
+    <p class="offer__retailer-name"><%= @offer.retailer.name %></p>
     <div>
       <%= simple_format @offer.description %>
     </div>
@@ -13,7 +13,7 @@
       
       <p>
         <strong>Offer ends:</strong>
-        <%= @offer.offer_ends %>
+        <span data-date><%= @offer.offer_ends %></span>
       </p>
       
       <p>
@@ -28,7 +28,7 @@
     <% end %>
   </div>
 
-  <div class="col-xs-5">
+  <div class="col-md-5">
     <%= image_tag(@offer.retailer.logo_url) if @offer.retailer.logo? %>
     <%= image_tag(@offer.cover_image_url, class: 'offer-card__image') if @offer.cover_image? %>
   </div>
