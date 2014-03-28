@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140328012914) do
+ActiveRecord::Schema.define(version: 20140328015537) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -20,9 +19,6 @@ ActiveRecord::Schema.define(version: 20140328012914) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(version: 20140328015537) do
->>>>>>> Add BIO to Charities
 
   create_table "charities", force: true do |t|
     t.string   "name"
