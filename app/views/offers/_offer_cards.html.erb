@@ -1,6 +1,6 @@
 <div class="bricks effect-4" data-bricks="true" id="offer-bricks">
   <% offers.each do |offer| %>
-    <a href="" class="brick__item offer-card">
+    <a href="<%= offer_path(offer) %>" class="brick__item offer-card">
       <%= image_tag(offer.cover_image_url, class: 'offer-card__image') if offer.cover_image? %>
       <div class="offer-card__content">
          <h4 class="offer-card__title"><%= offer.title %></h4>
