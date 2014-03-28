@@ -16,5 +16,4 @@
 /tmp
 
 # Ignore intellij files
-/.idea
 public/uploads
