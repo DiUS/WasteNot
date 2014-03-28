@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20140327234705) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "charity_id"
     t.string   "cover_image"
     t.integer  "retailer_id"
+    t.integer  "charity_id"
   end
 
   create_table "retailers", force: true do |t|
