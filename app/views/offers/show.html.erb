@@ -29,6 +29,7 @@
   </div>
 
   <div class="col-xs-5">
+    <%= image_tag(@offer.retailer.logo_url) if @offer.retailer.logo? %>
     <%= image_tag(@offer.cover_image_url, class: 'offer-card__image') if @offer.cover_image? %>
   </div>
 </div>
