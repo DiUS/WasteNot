@@ -14,6 +14,9 @@ class OffersController < ApplicationController
   def show
     @can_accept = !session[:c_org].nil? && @offer.charity_id.nil?
     @can_edit = !session[:r_org].nil? && @offer.retailer_id == session[:r_org].id
+    @can_endorse = !session[:r_org].nil? && @offer.retailer_id == session[:r_org].id && @offer.charity_id.present?
+
+    @endorsement = Endorsement.new
   end
 
   # GET /offers/new

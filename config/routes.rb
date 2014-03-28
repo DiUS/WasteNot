@@ -1,4 +1,6 @@
 WasteNot::Application.routes.draw do
+  resources :endorsements
+
   resources :categories
 
   resources :charities

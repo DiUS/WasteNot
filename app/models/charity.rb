@@ -1,4 +1,4 @@
 class Charity < ActiveRecord::Base
-  has_many :Offer
-
+  has_many :offers
+  has_many :endorsements
 end

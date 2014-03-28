@@ -32,3 +32,11 @@
 
 <h2>Offers Accepted</h2>
 <%= render 'offers/offer_cards', offers: @offers %>
+
+<h2>Endorsements</h2>
+<% @charity.endorsements.each do |endorsement| %>
+  <p>Stars: <%= endorsement.stars %></p>
+  <p>Comment: <%= endorsement.comment %></p>
+  <p>Retailer: <%= endorsement.retailer.name %></p>
+  <hr>
+<% end %>

@@ -46,3 +46,22 @@
 <%= link_to 'Accept Offer', offer_accept_path(@offer), class: "btn btn-success" if @can_accept%>
 <%= link_to 'Edit Offer', edit_offer_path(@offer) if @can_edit%>
 <%= link_to 'Remove offer', offer_unaccept_path(@offer), class: "btn btn-warning" if @can_edit && @offer.charity %>
+
+
+<% if @can_endorse %>
+  <%= form_for(@endorsement) do |f| %>
+    <%= f.hidden_field :retailer_id, value: @offer.retailer.id %>
+    <%= f.hidden_field :charity_id, value: @offer.charity.id %>
+    <div class="field">
+      <%= f.label :stars %><br>
+      <%= f.text_field :stars %>
+    </div>
+    <div class="field">
+      <%= f.label :comment %><br>
+      <%= f.text_field :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

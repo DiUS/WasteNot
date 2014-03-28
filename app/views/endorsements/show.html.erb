@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stars:</strong>
+  <%= @endorsement.stars %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @endorsement.comment %>
+</p>
+
+<%= link_to 'Edit', edit_endorsement_path(@endorsement) %> |
+<%= link_to 'Back', endorsements_path %>
