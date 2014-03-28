@@ -34,10 +34,9 @@ class OffersController < ApplicationController
   # POST /offers
   # POST /offers.json
   def create
-    retailer = Retailer.find(offer_params[:retailer])
     @offer = Offer.new
 
-    @offer.retailer = retailer
+    @offer.retailer = session[:r_org]
     @offer.title = offer_params[:title]
     @offer.description = offer_params[:description]
     @offer.location = offer_params[:location]
