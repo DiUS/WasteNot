@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Bio</th>
       <th>Webpage</th>
       <th>Contact name</th>
       <th>Contact email</th>
@@ -18,6 +19,7 @@
     <% @charities.each do |charity| %>
       <tr>
         <td><%= charity.name %></td>
+        <td><%= charity.bio %></td>
         <td><%= charity.webpage %></td>
         <td><%= charity.contact_name %></td>
         <td><%= charity.contact_email %></td>
