@@ -27,7 +27,7 @@ retailers = [
   ["Joans Clothing", "Womens clothing in Penrith", "www.joansclothing.com.au", "Joan Jett", "0412345678", "joan@joansclothing.com.au"]
 ]
 offers = [
-  ["Bread", "Fresh bread which we dont need", "Artarmon, Sydney", nil, 1, 4],
+  ["Bread", "Fresh bread which we dont need", "Artarmon, Sydney", nil, 1, 4, Date.new(2014, 03, 25), "Pickup"],
   ["Shoes", "Colourful footwear", "Glebe, Sydney", nil, 2, 2],
   ["10 kg tomatoes", "Very ripe need to be used quickly", "Artarmon, Sydney", nil, 3, 4]  
 ]
@@ -44,6 +44,6 @@ retailers.each do |name, bio, web_page, contact_name, contact_phone, contact_ema
   Retailer.create("name" => name, "bio" => bio, "web_page" => web_page, "contact_name" => contact_name, "contact_phone" => contact_phone, "contact_email" => contact_email)
 end
 
-offers.each do |title, description, location, charity_id, retailer_id, category_id|
-  Offer.create("title" => title, "description" => description, "location" => location, "charity_id" => charity_id, "retailer_id" => retailer_id, "category_id" => category_id)
+offers.each do |title, description, location, charity_id, retailer_id, category_id, offer_ends, delivery_options|
+  Offer.create!("title" => title, "description" => description, "location" => location, "charity_id" => charity_id, "retailer_id" => retailer_id, "category_id" => category_id, "offer_ends" => offer_ends, "delivery_options" => delivery_options)
 end
