@@ -1,0 +1,11 @@
+.offer__retailer-name {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.offer__category {
+  @extend .label;
+  @extend .label-default;
+  margin: 10px 0;
+  display: inline-block;
+}
