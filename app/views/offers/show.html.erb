@@ -27,6 +27,14 @@
       </p>
     <% end %>
 
+
+  <% if @offer.retailer %>
+    <p>
+      <strong>Retailer:</strong>
+      <%= @offer.retailer.name %>
+    </p>
+   <% end %>
+
     <% if @offer.charity %>
       <p>
         <strong>Charity:</strong>
